@@ -17,7 +17,7 @@
 
 <body class="bg-[#F2F2F2]">
     <!-- Navbar -->
-    <header class="flex justify-between max-w-[90%] mx-auto my-6">
+    <header class="flex justify-between max-w-[90%] mx-auto my-6 relative">
         <div class="flex justify-between">
             <img src="./assets/logo.png" class="h-[55px] w-[55px] my-auto" alt="Logo">
             <div class="ml-3">
@@ -25,7 +25,7 @@
                 <h2 class="font-inter text-[#006747] font-bold text-xl">Service</h2>
             </div>
         </div>
-        <div class="flex justify-between items-center gap-x-5">
+        <div class="hidden md:flex justify-between items-center gap-x-5">
             <div class="bg-[#41FF6B10] flex justify-between rounded-[50px] px-7 py-3">
                 <span class="font-inter font-bold">0</span>
                 <img src="./assets/heart.png" class="h-[25px] w-[22px] ml-[10px]" alt="heart">
@@ -39,9 +39,32 @@
                 <p class="ml-3 my-auto">copy</p>
             </div>
         </div>
+
+        <!-- Mobile Hamburger -->
+        <div class="my-auto md:hidden">
+            <i id="header-bar" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+        </div>
+
+        <div id="header-hamburger"
+            class="hidden flex-col justify-start items-center gap-3 bg-white p-4 absolute top-11 right-0 shadow-lg rounded-xl">
+            <div class="bg-[#41FF6B10] flex justify-between items-center rounded-full px-4 py-2 w-full">
+                <span class="font-inter font-bold text-sm">0</span>
+                <img src="./assets/heart.png" class="h-5 w-5 ml-2" alt="heart">
+            </div>
+            <div class="bg-[#41FF6B10] flex items-center rounded-full px-4 py-2 w-full">
+                <span class="font-inter font-bold text-sm">100</span>
+                <img src="./assets/coin.png" class="h-5 w-5 ml-2" alt="coin">
+            </div>
+            <div
+                class="bg-[#00A63E] flex items-center rounded-full px-4 py-2 w-full text-white font-inter font-semibold text-sm justify-center">
+                <span>0</span>
+                <p class="ml-2 my-auto">copy</p>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
+    <!--
     <section class="text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] py-4">
         <div class="my-2">
             <img src="./assets/logo.png" class="h-[92px] w-[92px] mx-auto" alt="Logo">
@@ -54,307 +77,11 @@
                 A Project by Government of the People’s Republic of Bangladesh</p>
         </div>
     </section>
-
+    -->
     <!-- Main Section -->
-    <main class="grid grid-cols-[70%_30%] max-w-[90%] mx-auto mt-12 gap-5 mb-8">
-        <section class="grid grid-cols-3 gap-[30px]">
-            <!-- First Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
 
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Second Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Third Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Fourth Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Fifth Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Sixth Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Seventh Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Eight Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Nineth Card -->
-            <div class="bg-white rounded-xl shadow-md p-8">
-                <div class="flex justify-between items-center">
-                    <div class="bg-[#FFE3E2] rounded-xl p-3 flex items-center justify-center">
-                        <img src="./assets/emergency.png" class="h-8 w-8" alt="emergency_icon">
-                    </div>
-                    <div class="my-auto">
-                        <img src="./assets/heart1.png" alt="heart_icon">
-                    </div>
-                </div>
-                <div class="mt-4">
-                    <h2 class="font-inter font-bold text-[22px]">National Emergency Number</h2>
-                    <p class="font-semibold text-lg text-[#5C5C5C] mt-2">National Emergency</p>
-
-                    <h1 class="font-inter font-bold text-2xl mt-6">999</h1>
-
-                    <p class="bg-[#F2F2F2] rounded-2xl p-3 max-w-[30%] text-center text-[#5C5C5C] text-lg mt-3">All</p>
-                </div>
-                <div class="flex gap-2 mt-6">
-                    <button
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg border-2 border-[#D4D6D5] hover:bg-gray-100">
-                        <img src="./assets/copy.png" alt="copy_icon" class="h-5 w-5">
-                        <span>Copy</span>
-                    </button>
-                    <a
-                        class="flex items-center justify-center gap-2 w-full px-3 py-2 rounded-lg bg-[#00A63E] hover:bg-green-700">
-                        <img src="./assets/call.png" alt="call_icon" class="h-5 w-5">
-                        <span class="text-white">Call</span>
-                    </a>
-                </div>
-            </div>
-
-        </section>
-        <section class="bg-white rounded-xl shadow-md p-6">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center gap-3">
-                    <img src="./assets/clock.png" alt="clock icon" class="h-6 w-6">
-                    <p class="font-inter font-semibold text-lg">History</p>
-                </div>
-                <div
-                    class="bg-[#00A63E] flex justify-between rounded-[50px] px-6 py-3 text-white font-inter font-semibold">
-                    <p class="my-auto">Clear</p>
-                </div>
-            </div>
-            <div>
-
-            </div>
-        </section>
-    </main>
+    <script src="https://kit.fontawesome.com/08114a201b.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
