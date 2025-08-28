@@ -84,3 +84,12 @@ for (let i = 0; i < callButtons.length; i++) {
         historyDiv.insertAdjacentHTML('beforeend', historyHTML);
     });
 }
+
+// Call history delete function
+let clearBtn = document.getElementById("history-clear-btn");
+let historyDiv = document.getElementById("history");
+
+clearBtn.addEventListener("click", function () {
+  historyDiv.innerHTML = "";
+  alert("Call history cleared!");
+});
